@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://w6t7jue7oh6a"]
+
+[sub_resource type="GDScript" id="GDScript_as1nq"]
+script/source = "extends Node
+
+signal experience_vial_collected(number: float)
+
+func emit_experience_vial_collected(number: float):
+	experience_vial_collected.emit(number)
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="GameEvents" type="Node"]
+script = SubResource("GDScript_as1nq")
